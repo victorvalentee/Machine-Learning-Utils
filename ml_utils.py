@@ -295,6 +295,14 @@ def create_distribution_plot(importance_list, noncomplice_rate_list,
 # --------
 
 # Misc
-	# Load model (pkl)
-	# Save model (pkl)
+from sklearn.externals import joblib
+
+# Save
+def save_model(model, model_name):
+    joblib.dump(model, model_name + ".pkl")
+
+# Load
+def load_model(path_to_saved_model):
+    loaded_model = joblib.load(path_to_saved_model)
+    return loaded_model
 # --------
