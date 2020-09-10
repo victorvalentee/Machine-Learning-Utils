@@ -6,17 +6,6 @@ import seaborn as sns
 
 plt.rc('figure', figsize=(15.0, 5.0))
 
-def custom_strip(value, replace_not_string = np.nan):
-    '''
-    Casts value to a string a strips whitespaces from it.
-    If value cannot be cast to a string, replace value for another character (default = np.nan).
-    '''
-    
-    if pd.isnull(value):
-    	return replace_not_string
-
-    return str(value).strip()
-
 def string_to_numeric(value, replace_nan = np.nan, br_format = False):
     '''
     Casts string value to a numeric type using pandas.to_numeric() function.
